@@ -1,6 +1,6 @@
 import sys
-sys.path.append("/home/pi/Desktop/Python/Libraries/Adafruit/Adafruit-Raspberry-Pi-Python-Code-master/Adafruit_I2C")
-sys.path.append("/home/pi/Desktop/Python/Libraries/Adafruit/Adafruit-Raspberry-Pi-Python-Code-master/Adafruit_ADS1x15")
+sys.path.append("/home/pi/Desktop/RPi/Python/Libraries/Adafruit/Adafruit_I2C")
+sys.path.append("/home/pi/Desktop/RPi/Python/Libraries/Adafruit/Adafruit_ADS1x15")
 
 import time
 import math

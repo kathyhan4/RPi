@@ -1,5 +1,5 @@
 import sys
-sys.path.append("/home/pi/Desktop/Python/Libraries/HTU21D")
+sys.path.append("/home/pi/Desktop/RPi/Python/Libraries/HTU21D")
 import time
 import math
 import numpy
@@ -17,7 +17,7 @@ time_per_point = float(1)/60 # time between data pionts in minutes
 number_points = run_length * 60 / time_per_point
 
 #Output file
-OutputFile = '/home/pi/Desktop/Data/TempHumidity/TRHData'
+OutputFile = '/home/pi/Desktop/RPi/Python/Data/TempHumidity/TRHData'
 
 #Pin assignments
 PIN_MUX_ADDR_B0 = 17
