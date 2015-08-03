@@ -193,7 +193,7 @@ for i in range(0,int(number_points)):
         GPIO.cleanup(21)
         
         first_time_seconds = str(math.floor(Current100Mohm[0,1]))
-        OutputFile = '/home/pi/Desktop/LeakageCurrentData/LeakageCurrent100Mohm'
+        OutputFile = '/home/pi/Desktop/RPiData/LeakageCurrent'
         WriteToFile(str(Current100Mohm[i,0]) + "," + str(Current100Mohm[i,1]) + "," + str(Current100Mohm[i,2]) + "," + str(Current100Mohm[i,3]) + "," + \
         str(Current100Mohm[i,4]) + "," + str(Current100Mohm[i,5]) + "," + str(Current100Mohm[i,6]) + "," + str(Current100Mohm[i,7]) + "," + \
         str(Current100Mohm[i,8]) + "," + str(Current100Mohm[i,9]) + "," + "\n")

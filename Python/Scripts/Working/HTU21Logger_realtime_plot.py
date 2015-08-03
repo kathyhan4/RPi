@@ -17,7 +17,7 @@ time_per_point = float(1)/60 # time between data pionts in minutes
 number_points = run_length * 60 / time_per_point
 
 #Output file
-OutputFile = '/home/pi/Desktop/RPi/Python/Data/TempHumidity/TRHData'
+OutputFile = '/home/pi/Desktop/RPiData/TempHumidity/TRHData'
 
 #Pin assignments
 PIN_MUX_ADDR_B0 = 17
