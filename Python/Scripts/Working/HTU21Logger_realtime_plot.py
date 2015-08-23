@@ -34,7 +34,7 @@ PIN_LED7 = 21
 
 #Dictionaries
 muxAddress={0:'000',1:'001',2:'010',3:'011',4:'100',5:'101',6:'110',7:'111'}
-ledAddress={0:'00000000',1:'00000010',2:'00000100',3:'00001000',4:'00010000',5:'00100000',6:'01000000',7:'10000000'}
+ledAddress={0:'00000000',1:'00000010',2:'00000100',3:'00001000',4:'00010000',5:'00100000',6:'01000000',7:'10000000',8:'00000000'}
 ###=====================FUNCTIONS=======================================
 
 def setupGPIOPins():
@@ -108,10 +108,10 @@ GPIO.setwarnings(False)
 cleanGPIOPins()
 setupGPIOPins()
 
-#Initializes plot (24x12 inches)
-plt.figure(figsize=(24, 12), dpi=80)
-plt.ion()
-plt.show()
+##Initializes plot (24x12 inches)
+#plt.figure(figsize=(24, 12), dpi=80)
+#plt.ion()
+#plt.show()
 
 #Main loop
 for i in range(0,int(number_points)):
@@ -137,22 +137,22 @@ for i in range(0,int(number_points)):
         #Prints the data for this channel
         print("Channel: %d  Temperature: %3.1fC  Humidity: %3.1f%%" % (Channel+1, temp , hum))
         
-        #Plot the data
-        ax = plt.subplot(241+Channel)
-        plt.plot(TimeTempHumidity[:,32],TimeTempHumidity[:,2+Channel*4],'bo',markersize=8)
-        plt.plot(TimeTempHumidity[:,32],TimeTempHumidity[:,3+Channel*4],'ro',markersize=8)
-        plt.title("Real time data - Channel " + str(Channel+1),fontsize=20)
-        plt.xlabel("Time (hours)", fontsize=12)
-        plt.ylabel("%RH or Temperature Deg. C", fontsize=12)
-        axes = plt.gca()
-        axes.set_ylim([0,100])
-        ax.xaxis.set_major_formatter(mtick.FormatStrFormatter('%.2f'))
+        ##Plot the data
+        #ax = plt.subplot(241+Channel)
+        #plt.plot(TimeTempHumidity[:,32],TimeTempHumidity[:,2+Channel*4],'bo',markersize=8)
+        #plt.plot(TimeTempHumidity[:,32],TimeTempHumidity[:,3+Channel*4],'ro',markersize=8)
+        #plt.title("Real time data - Channel " + str(Channel+1),fontsize=20)
+        #plt.xlabel("Time (hours)", fontsize=12)
+        #plt.ylabel("%RH or Temperature Deg. C", fontsize=12)
+        #axes = plt.gca()
+        #axes.set_ylim([0,100])
+        #ax.xaxis.set_major_formatter(mtick.FormatStrFormatter('%.2f'))
         
-        #Sleeps for 1ms to let HTU21D breathe
-        time.sleep(0.001)
-    
-    #Draws the plot
-    plt.draw()
+        ##Sleeps for 1ms to let HTU21D breathe
+        #time.sleep(0.001)
+        setLED(8)
+    ##Draws the plot
+    #plt.draw()
     
     #Gets the timestamp of the first data point
     first_time_seconds = str(math.floor(TimeTempHumidity[0,1]))
